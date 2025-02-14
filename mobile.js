@@ -1,7 +1,7 @@
 let highestZ = 1;
 
 class Paper {
-  holdingPaper = false;
+  holdingPaper = true;
   touchStartX = 0;
   touchStartY = 0;
   touchMoveX = 0;
@@ -15,7 +15,7 @@ class Paper {
   rotation = Math.random() * 30 - 15;
   currentPaperX = 0;
   currentPaperY = 0;
-  rotating = false;
+  rotating = true;
 
   init(paper) {
     paper.addEventListener('touchmove', (e) => {
@@ -70,7 +70,7 @@ class Paper {
       this.rotating = false;
     });
 
-    // For two-finger rotation on touch screens
+
     paper.addEventListener('gesturestart', (e) => {
       e.preventDefault();
       this.rotating = true;
